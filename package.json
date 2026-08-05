@@ -32,6 +32,7 @@
     "build": "turbo run build",
     "check-types": "turbo run check-types",
     "dev:web": "turbo run dev -F web",
+    "dev:landing": "turbo run dev -F landing",
     "dev:server": "turbo run dev -F server",
     "db:push": "turbo run db:push -F @sharity/db",
     "db:studio": "turbo run db:studio -F @sharity/db",

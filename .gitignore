@@ -54,3 +54,11 @@ coverage
 .cache
 tmp
 temp
+
+# SQLite / Local Databases
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite
+

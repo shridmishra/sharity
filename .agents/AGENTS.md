@@ -12,10 +12,23 @@
 - **Authentication**: Better-Auth (`packages/auth`) with Drizzle SQLite adapter
 - **Environment Validation**: `@t3-oss/env-core` (`packages/env`)
 
+## Agent Documentation Maintenance Rule
+
+> [!IMPORTANT]
+> **MANDATORY RULE FOR AGENTS**: Whenever significant changes are made to the codebase architecture, scripts, dependencies, ports, workspace apps, or global workflows, you MUST immediately update `AGENTS.md` ([AGENTS.md](file:///Users/shrid/sharity/AGENTS.md)) and [.agents/AGENTS.md](file:///Users/shrid/sharity/.agents/AGENTS.md) to keep documentation in sync.
+
 ---
 
-## Setup Commands
+## Setup & Development Commands
 
+- **Global `shar` CLI Binary**:
+  - `shar` : Sync database schema, run type checks, and launch full development stack (`server`, `web`, `landing`).
+  - `shar kill` : Terminate all running Sharity servers on ports `3000`, `3001`, `3002`, `8080`.
+  - `shar push` : Apply Drizzle database schema (`bun run db:push`).
+  - `shar check` : Run TypeScript type checks (`bun run check-types`).
+  - `shar local` : Start local Turso/SQLite database server (`bun run db:local`).
+- **Global Workflow**:
+  - Run `/shar` in chat to execute the end-to-end stack runner & verification workflow.
 - **Install dependencies**:
   ```bash
   bun install
@@ -27,6 +40,10 @@
 - **Apply schema / Push database migrations**:
   ```bash
   bun run db:push
+  ```
+- **Kill running development servers**:
+  ```bash
+  bun run kill-dev  # or `shar kill`
   ```
 - **Open Drizzle Studio (Database GUI)**:
   ```bash

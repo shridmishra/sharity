@@ -34,6 +34,7 @@
     "dev:web": "turbo run dev -F web",
     "dev:landing": "turbo run dev -F landing",
     "dev:server": "turbo run dev -F server",
+    "kill-dev": "lsof -ti:3000,3001,3002,8080 | xargs kill -9 2>/dev/null || true",
     "db:push": "turbo run db:push -F @sharity/db",
     "db:studio": "turbo run db:studio -F @sharity/db",
     "db:generate": "turbo run db:generate -F @sharity/db",

@@ -1,0 +1,3 @@
+{
+  "extends": "@sharity/config/tsconfig.base.json"
+}
